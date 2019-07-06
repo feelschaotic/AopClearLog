@@ -14,7 +14,11 @@ Aspect 语法难懂？ASM 字节码操作繁琐？APT 难以精准找到切入�
 - AST抽象语法树
 - 编译原理
 
-## 三、原理
+## 三、如何使用
+
+clone 本项目，运行后观察 logcat 无 MainActivity 中的 log 输出，即为清除成功。
+
+## 四、原理
 
 既然要操作 AST，我们怎么拿到 AST 呢？
 
@@ -24,7 +28,7 @@ Aspect 语法难懂？ASM 字节码操作繁琐？APT 难以精准找到切入�
 
 ![](https://upload-images.jianshu.io/upload_images/3167794-8a6c67f65e124ae4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/908/format/webp)
 
-## 四、实践步骤
+## 五、实践步骤
 
 整体思路：在编译期间拿到 AST，扫描是否含有特定日志语句如：Log，存在则删除该语句。
 
